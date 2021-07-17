@@ -1,0 +1,147 @@
+/* 
+    Author: Mai Trong Nhan
+    Theme: Food order website admin
+    Version: 1.0
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.clear-fix {
+    float: none;
+    clear: both;
+}
+
+.tbl-full {
+    width: 100%;
+}
+
+.tbl-30 {
+    width: 50%;
+}
+
+.format-input {
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    width: 400px;
+    height: 40px;
+    border-radius: 7px;
+    opacity: 0.8;
+    border: 0;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+table tr th {
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td {
+    padding: 1%;
+}
+
+.btn-center {
+    width: 85px;
+}
+.btn-center .btn-secondary {
+    padding: 15px;
+}
+
+.btn-primary {
+    background-color: #1e90ff;
+    padding: 1%;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-primary:hover{
+    background-color: #3742fa;
+}
+
+.btn-secondary {
+    background-color: #b7ed9f;
+    border: 0;
+    padding: 1%;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-secondary:hover{
+    background-color: #2ed573;
+}
+
+.btn-danger {
+    background-color: #ff6b81;
+    padding: 1%;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-danger:hover{
+    background-color: #ff4758;
+}
+
+/* menu */
+.menu {
+    border-bottom: 1px solid gray;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 1%;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff6b81;
+}
+
+.menu ul li a:hover{
+    color: #ff4757;
+}
+
+/* main content */
+.main-content {
+    background-color: #f1f2f6;
+    padding: 3% 0;
+}
+
+.col-4 {
+    width: 14%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+/* footer */
+.footer {
+    background-color: #ff4757;
+    color: white;
+}
