@@ -33,6 +33,14 @@
     width: 50%;
 }
 
+.success {
+    color: #2ed573;
+}
+
+.error {
+    color: #ff4757;
+}
+
 .format-input {
     text-align: center;
     margin-left: 5%;
