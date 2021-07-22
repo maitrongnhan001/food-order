@@ -1,0 +1,62 @@
+body {
+    background-image: url('../images/login.jpeg'); 
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+	font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+}
+
+/* css for login */
+.login-header {
+    margin-top: 5%;
+}
+
+.login {
+    width: 55%;
+    height: auto;
+    margin: 13% auto;
+}
+
+.login .form-login {
+    text-align: center;
+    margin: 0 auto;
+}
+ .login .form-login h2 {
+     margin: 20pt;
+ }
+
+ .login .form-login .form-group {
+    margin:  0 auto;
+    opacity: 0.8;
+    width: 50%;
+    display: block;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+    font-size: 17px;
+ }
+
+ .login .form-login .submit-login {
+     margin: 0 auto;
+     width: 140px;
+     height: 40px;
+     border: 0;
+ }
+
+ .footer-login {
+    margin: 2% auto;
+    font-size: .9em;
+    color: gray;
+    letter-spacing: 2px;
+ }
+
+ .footer-login p a{
+     color: gray;
+ }
