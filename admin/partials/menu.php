@@ -1,5 +1,6 @@
 <?php
 include('../config/connect_database.php');
+include('check-login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +23,7 @@ include('../config/connect_database.php');
                 <li><a href="manager-category.php">Category</a></li>
                 <li><a href="manager-food.php">Food</a></li>
                 <li><a href="manager-order.php">Order</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
     </div>
