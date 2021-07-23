@@ -7,7 +7,6 @@ define('SITEURL', 'http://localhost/food-order/');
 session_start();
 
 function execute($sql) {
-    echo('call');
     $conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
     if($conn -> connect_error) {
         die();
