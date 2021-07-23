@@ -52,6 +52,10 @@
     border: 0;
 }
 
+.tbl-30 .format-ip-radio {
+    width: 100px;
+}
+
 .center {
     margin: 0 auto;
 }
@@ -153,4 +157,6 @@ table tr td {
     background-color: #ff4757;
     color: white;
 }
+
+
 
