@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $featured = $_POST['featured'];
     $active = $_POST['active'];
-    if(isset($_FILES["image"]["name"])) {
+    if($_FILES["image"]["name"] != "") {
         $image_name = $_FILES["image"]["name"];
         //auto rename out image
         //get extension of out image(jpg, png, gif, etc) e.g "abc.jpg"
@@ -87,6 +87,7 @@ if (isset($_POST['submit'])) {
     unset($_POST['submit']);
     unset($_POST['title']);
     unset($_POST['active']);
+    unset($_FILES['image']);
     if ($result) {
         $_SESSION['add'] = "<div class='success'>Category Added Successfully.</div>";
         header('Location: '.SITEURL.'admin/manager-category.php');
