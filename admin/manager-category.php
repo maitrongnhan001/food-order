@@ -14,6 +14,16 @@
             echo $_SESSION['upload'] . '<br /><br /><br />';
             unset($_SESSION['upload']);
         }
+        //check remove image
+        if (isset($_SESSION['remove'])) {
+            echo $_SESSION['remove'] . '<br /><br /><br />';
+            unset($_SESSION['remove']);
+        }
+        //check remove image
+        if (isset($_SESSION['delete'])) {
+            echo $_SESSION['delete'] . '<br /><br /><br />';
+            unset($_SESSION['delete']);
+        }
         ?>
         <a href="<?php echo SITEURL; ?>admin/add-category.php" class="btn-primary">Add Category</a>
         <br /><br /><br />
@@ -54,7 +64,7 @@
                         <td><?php echo $index['active']; ?></td>
                         <td>
                             <a class="btn-secondary" href="#">Update Category</a>
-                            <a class="btn-danger" href="#">Delete Category</a>
+                            <a class="btn-danger" href=<?php echo SITEURL.'admin/delete-category.php?id='.$index['id'].'&image_name='.$index['image_name']; ?>>Delete Category</a>
                         </td>
                     </tr>
                 <?php
