@@ -24,7 +24,18 @@
             echo $_SESSION['delete'] . '<br /><br /><br />';
             unset($_SESSION['delete']);
         }
+        //check get category
+        if (isset($_SESSION['no-category-found'])) {
+            echo $_SESSION['no-category-found'] . '<br /><br /><br />';
+            unset($_SESSION['no-category-found']);
+        }
+        //check update category
+        if (isset($_SESSION['update'])) {
+            echo $_SESSION['update'] . '<br /><br /><br />';
+            unset($_SESSION['update']);
+        }
         ?>
+        
         <a href="<?php echo SITEURL; ?>admin/add-category.php" class="btn-primary">Add Category</a>
         <br /><br /><br />
         <table class="tbl-full">
@@ -63,7 +74,7 @@
                         <td><?php echo $index['featured']; ?></td>
                         <td><?php echo $index['active']; ?></td>
                         <td>
-                            <a class="btn-secondary" href="#">Update Category</a>
+                            <a class="btn-secondary" href=<?php echo SITEURL.'admin/update-category.php?id='.$index['id']; ?>>Update Category</a>
                             <a class="btn-danger" href=<?php echo SITEURL.'admin/delete-category.php?id='.$index['id'].'&image_name='.$index['image_name']; ?>>Delete Category</a>
                         </td>
                     </tr>
