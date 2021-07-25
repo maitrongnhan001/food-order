@@ -50,6 +50,17 @@
     border-radius: 7px;
     opacity: 0.8;
     border: 0;
+    font-size: 17px;
+}
+.format-textarea {
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    width: 400px;
+    border-radius: 7px;
+    opacity: 0.8;
+    border: 0;
+    font-size: 17px;
 }
 
 .tbl-30 .format-ip-radio {
