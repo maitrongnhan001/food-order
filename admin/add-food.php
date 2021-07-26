@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
         header('Location: '. SITEURL . 'admin/manager-food.php');
     } else {
         $_SESSION['add_food'] = '<div class="error">Faild to added Food</div>';
-        header('Location: ' . SITEURL . 'admin/manager-food.php');
+        header('Location: '. SITEURL . 'admin/manager-food.php');
     }
 }
 include('partials/footer.php');
