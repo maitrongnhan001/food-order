@@ -144,6 +144,8 @@ if (isset($_POST['submit'])) {
         } else {
             $image_name = $current_image;
         }
+    } else {
+        $image_name = $current_image;
     }
     //update database
     $query = "UPDATE tbi_category SET 
