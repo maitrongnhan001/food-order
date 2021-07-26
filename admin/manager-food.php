@@ -4,9 +4,35 @@
         <h1>Manager Food</h1>
         <br />
         <?php
+        //check food
         if (isset($_SESSION['add_food'])) {
             echo $_SESSION['add_food'] . '<br/><br/><br/>';
             unset($_SESSION['add_food']);
+        }
+        //check remove
+        if (isset($_SESSION['remove'])) {
+            echo $_SESSION['remove'] . '<br/><br/><br/>';
+            unset($_SESSION['remove']);
+        }
+        //check Delete
+        if (isset($_SESSION['delete_food'])) {
+            echo $_SESSION['delete_food'] . '<br/><br/><br/>';
+            unset($_SESSION['delete_food']);
+        }
+        //check get food from database
+        if (isset($_SESSION['no-found'])) {
+            echo $_SESSION['no-found'] . '<br/><br/><br/>';
+            unset($_SESSION['no-found']);
+        }
+        //check upload the image
+        if (isset($_SESSION['upload'])) {
+            echo $_SESSION['upload'] . '<br/><br/><br/>';
+            unset($_SESSION['upload']);
+        }
+        //check update data
+        if (isset($_SESSION['update'])) {
+            echo $_SESSION['update'] . '<br/><br/><br/>';
+            unset($_SESSION['update']);
         }
         ?>
         <a href=<?php echo SITEURL . 'admin/add-food.php' ?> class="btn-primary">Add Food</a>
@@ -65,8 +91,15 @@
                     <td> <?php echo $index['featured']; ?> </td>
                     <td> <?php echo $index['active'] ?> </td>
                     <td>
-                        <a class="btn-secondary" href="#">Update Admin</a>
-                        <a class="btn-danger" href="#">Delete Admin</a>
+                        <a class="btn-secondary" href= <?php 
+                        //get id and image name
+                        echo SITEURL.'admin/update-food.php?id='.$index['id'];
+                        ?> >Update Admin</a>
+                        <a class="btn-danger" 
+                        href= <?php 
+                        //get id and image name
+                        echo SITEURL.'admin/delete-food.php?id='.$index['id'].'&image_name='.$index['image_name'];
+                        ?> >Delete Admin</a>
                     </td>
                 </tr>
             <?php
