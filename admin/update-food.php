@@ -135,7 +135,6 @@ include('partials/menu.php');
 </div>
 
 <?php
-require_once('../Debug/debug.php');
 if (isset($_POST['submit'])) {
     //get data
     $title = $_POST['title'];

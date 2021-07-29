@@ -84,6 +84,7 @@ table tr th {
 
 table tr td {
     padding: 1%;
+    max-width: 10em;
 }
 
 .btn-center {
