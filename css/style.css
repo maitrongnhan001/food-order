@@ -63,6 +63,9 @@ a:hover{
     color: white;
     background-color: #ff4757;
 }
+.row {
+    display: flex;
+}
 h2{
     color: #2f3542;
     font-size: 2rem;
@@ -170,6 +173,8 @@ fieldset{
 .food-detail{
     font-size: 1rem;
     color: #747d8c;
+    max-height: 70px;
+    overflow-y: hidden;
 }
 
 
