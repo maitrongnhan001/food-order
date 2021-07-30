@@ -16,7 +16,7 @@
             $image_name = $index['image_name'];
             $title = $index['title'];
         ?>
-            <a href="category-foods.php">
+            <a href= <?php echo SITEURL.'category-foods.php?category_id='.$id.'&title='.$title; ?>>
                 <div class="box-3 float-container">
                     <?php
                     if ($image_name != "") {
