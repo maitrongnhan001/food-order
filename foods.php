@@ -6,7 +6,7 @@ include('Layout/menu.php');
 <section class="food-search text-center">
     <div class="container">
 
-        <form action="food-search.html" method="POST">
+        <form action=<?php echo SITEURL.'food-search.php'; ?> method="POST">
             <input type="search" name="search" placeholder="Search for Food.." required>
             <input type="submit" name="submit" value="Search" class="btn btn-primary">
         </form>
@@ -60,6 +60,10 @@ include('Layout/menu.php');
                     </div>
                 </div>
                 <?php
+                //fix action $index >= members of array result
+                if ($index + 1 >= count($result)) {
+                    break;
+                }
                 $id = $result[$index + 1]['id'];
                 $title = $result[$index + 1]['title'];
                 $description = $result[$index + 1]['description'];
