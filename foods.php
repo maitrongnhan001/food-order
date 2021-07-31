@@ -56,7 +56,7 @@ include('Layout/menu.php');
                         </p>
                         <br>
 
-                        <a href="order.php" class="btn btn-primary">Order Now</a>
+                        <a href=<?php echo SITEURL.'order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <?php
@@ -91,7 +91,7 @@ include('Layout/menu.php');
                         </p>
                         <br>
 
-                        <a href="order.php" class="btn btn-primary">Order Now</a>
+                        <a href=<?php echo SITEURL.'order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
             </div>
