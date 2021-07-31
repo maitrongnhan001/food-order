@@ -40,6 +40,14 @@
     float: none;
 }
 
+.success {
+    color: #2ed573;
+}
+
+.error {
+    color: #ff4757;
+}
+
 a{
     color: #ff6b81;
     text-decoration: none;
@@ -194,6 +202,7 @@ fieldset{
 }
 .input-responsive{
     width: 96%;
+    height: 35px;
     padding: 1%;
     margin-bottom: 3%;
     border: none;

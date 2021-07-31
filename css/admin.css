@@ -41,6 +41,18 @@
     color: #ff4757;
 }
 
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
+
 .format-input {
     text-align: center;
     margin-left: 5%;
@@ -100,6 +112,8 @@ table tr td {
     border-radius: 5px;
     color: white;
     text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 .btn-primary:hover{
@@ -113,6 +127,8 @@ table tr td {
     border-radius: 5px;
     color: black;
     text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 .btn-secondary:hover{
@@ -125,6 +141,8 @@ table tr td {
     border-radius: 5px;
     color: white;
     text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 .btn-danger:hover{
@@ -174,6 +192,3 @@ table tr td {
     background-color: #ff4757;
     color: white;
 }
-
-
-
