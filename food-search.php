@@ -22,6 +22,8 @@
     <div class="container">
         <h2 class="text-center">Food Menu</h2>
         <?php
+        //clear search
+        $search = clearStringSql($search);
         //Get data from database
         $query = "SELECT * FROM tbl_food WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
         $result = executeResult($query);

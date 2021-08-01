@@ -44,6 +44,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
     //check login
+    $username = clearStringSql($username);
+    $password = clearStringSql($password);
     $query = "SELECT * FROM tbl_admin WHERE username = '$username' AND password = '$password'";
     $result = executeResult($query);
     if(count($result) == 1) {
