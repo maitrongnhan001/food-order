@@ -35,7 +35,7 @@ include('config/connect_database.php');
                         <a href= <?php echo SITEURL.'foods.php'; ?>>Foods</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href=<?php echo SITEURL.'admin' ?>>Admin</a>
                     </li>
                 </ul>
             </div>
