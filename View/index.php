@@ -40,7 +40,7 @@ if (isset($_SESSION['order'])) {
                     <?php
                     if ($image_name != "") {
                     ?>
-                        <img src=<?php echo 'images/category/' . $image_name; ?> alt="Pizza" class="img-responsive img-curve">
+                        <img src=<?php echo SITEURL.'images/category/' . $image_name; ?> alt="Pizza" class="img-responsive img-curve">
                     <?php
                     } else {
                         echo '<div class="error">No Image.</div>';
@@ -82,7 +82,7 @@ if (isset($_SESSION['order'])) {
                     if ($image_name != "") {
                     ?>
                         <div class="food-menu-img">
-                            <img src=<?php echo 'images/food/' . $image_name; ?> alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                            <img src=<?php echo SITEURL.'images/food/' . $image_name; ?> alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                         </div>
                     <?php
                     } else {
@@ -113,7 +113,7 @@ if (isset($_SESSION['order'])) {
                     if ($image_name != "") {
                     ?>
                         <div class="food-menu-img">
-                            <img src=<?php echo 'images/food/' . $image_name; ?> alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                            <img src=<?php echo SITEURL.'images/food/' . $image_name; ?> alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                         </div>
                     <?php
                     } else {
