@@ -3,13 +3,13 @@
         <div class="container text-center">
             <ul>
                 <li>
-                    <a href="#"><img width="50px" src="images/Logo-Facebook.png"/></a>
+                    <a href="#"><img width="50px" src="<?php echo SITEURL ?>images/Logo-Facebook.png"/></a>
                 </li>
                 <li>
-                    <a href="#"><img width="50px" src="images/Logo-Instagram.png"/></a>
+                    <a href="#"><img width="50px" src="<?php echo SITEURL ?>images/Logo-Instagram.png"/></a>
                 </li>
                 <li>
-                    <a href="#"><img width="50px" src="images/Logo-Tiwtter.png"/></a>
+                    <a href="#"><img width="50px" src="<?php echo SITEURL ?>images/Logo-Tiwtter.png"/></a>
                 </li>
             </ul>
         </div>

@@ -1,5 +1,5 @@
 <?php
-include('config/connect_database.php');
+include('../Model/connect_database.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@ include('config/connect_database.php');
         <div class="container">
             <div class="logo">
                 <a href= <?php echo SITEURL.'index.php'; ?> title="Logo">
-                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                    <img src="<?php echo SITEURL ?>images/logo.png" alt="Restaurant Logo" class="img-responsive">
                 </a>
             </div>
 
