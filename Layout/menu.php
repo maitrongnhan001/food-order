@@ -1,5 +1,5 @@
 <?php
-include('../Model/connect_database.php');
+include('config/connect_database.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,16 +26,16 @@ include('../Model/connect_database.php');
             <div class="menu text-right">
                 <ul>
                     <li>
-                        <a href= <?php echo SITEURL.'View/index.php'; ?>>Home</a>
+                        <a href= <?php echo SITEURL.'index.php'; ?>>Home</a>
                     </li>
                     <li>
-                        <a href= <?php echo SITEURL.'View/categories.php'; ?>>Categories</a>
+                        <a href= <?php echo SITEURL.'categories.php'; ?>>Categories</a>
                     </li>
                     <li>
-                        <a href= <?php echo SITEURL.'View/foods.php'; ?>>Foods</a>
+                        <a href= <?php echo SITEURL.'foods.php'; ?>>Foods</a>
                     </li>
                     <li>
-                        <a href=<?php echo SITEURL.'View/admin' ?>>Admin</a>
+                        <a href=<?php echo SITEURL.'admin' ?>>Admin</a>
                     </li>
                 </ul>
             </div>

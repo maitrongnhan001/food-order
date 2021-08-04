@@ -59,7 +59,7 @@
                             </p>
                             <br>
 
-                            <a href=<?php echo SITEURL.'View/order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
+                            <a href=<?php echo SITEURL.'order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                     <?php
@@ -94,7 +94,7 @@
                             </p>
                             <br>
 
-                            <a href= <?php echo SITEURL.'View/order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
+                            <a href= <?php echo SITEURL.'order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
