@@ -35,7 +35,7 @@ if (isset($_SESSION['order'])) {
             $image_name = $index['image_name'];
             $title = $index['title'];
         ?>
-            <a href= <?php echo SITEURL.'category-foods.php?category_id='.$id.'&title='.$title; ?>>
+            <a href= <?php echo SITEURL.'View/category-foods.php?category_id='.$id.'&title='.$title; ?>>
                 <div class="box-3 float-container">
                     <?php
                     if ($image_name != "") {
@@ -98,7 +98,7 @@ if (isset($_SESSION['order'])) {
                         </p>
                         <br>
 
-                        <a href=<?php echo SITEURL.'order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
+                        <a href=<?php echo SITEURL.'View/order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
                 <?php
@@ -129,7 +129,7 @@ if (isset($_SESSION['order'])) {
                         </p>
                         <br>
 
-                        <a href= <?php echo SITEURL.'order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
+                        <a href= <?php echo SITEURL.'View/order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
             </div>
