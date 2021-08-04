@@ -43,7 +43,7 @@
                         if ($image_name != "") {
                         ?>
                             <div class="food-menu-img">
-                                <img src=<?php echo 'images/food/' . $image_name; ?> alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                <img src=<?php echo SITEURL.'images/food/' . $image_name; ?> alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                             </div>
                         <?php
                         } else {
@@ -59,7 +59,7 @@
                             </p>
                             <br>
 
-                            <a href="order.php" class="btn btn-primary">Order Now</a>
+                            <a href=<?php echo SITEURL.'View/order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                     <?php
@@ -78,7 +78,7 @@
                         if ($image_name != "") {
                         ?>
                             <div class="food-menu-img">
-                                <img src=<?php echo 'images/food/' . $image_name; ?> alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                <img src=<?php echo SITEURL.'images/food/' . $image_name; ?> alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                             </div>
                         <?php
                         } else {
@@ -94,7 +94,7 @@
                             </p>
                             <br>
 
-                            <a href="order.php" class="btn btn-primary">Order Now</a>
+                            <a href= <?php echo SITEURL.'View/order.php?id='.$id; ?> class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
