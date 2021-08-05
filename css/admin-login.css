@@ -60,3 +60,34 @@ body {
  .footer-login p a{
      color: gray;
  }
+
+.form-login .row {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-login .row .register {
+    float:left;
+    text-decoration: none;
+    color: blue;
+    transition: 0.1s;
+}
+
+.form-login .row .register:hover{
+    color: blueviolet;
+}
+
+.form-login .row .forgot {
+    float: right;
+    text-decoration: none;
+    color: blue;
+    transition: 0.1s;
+}
+
+.form-login .row .forgot:hover {
+    color: blueviolet;
+}
+
+.form-login .row .check-sex {
+    margin: 1%;
+}

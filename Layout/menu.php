@@ -37,6 +37,9 @@ include('config/connect_database.php');
                     <li>
                         <a href=<?php echo SITEURL.'admin' ?>>Admin</a>
                     </li>
+                    <li>
+                        <a href=<?php echo SITEURL.'customer/Login.php'; ?> >Login</a>
+                    </li>
                 </ul>
             </div>
 
