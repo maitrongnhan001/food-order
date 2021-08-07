@@ -18,6 +18,12 @@ include('../config/connect_database.php');
     <div class="login">
         <div class="form-login">
             <h2>LOGIN FORM</h2>
+            <?php
+            if (isset($_SESSION['add_customer'])) {
+                echo $_SESSION['add_customer'];
+                unset($_SESSION['add_customer']);
+            }
+            ?>
             <form action="" method="POST">
                 <input class="form-group" type="text" name="username" placeholder="Enter Username">
                 <br>
