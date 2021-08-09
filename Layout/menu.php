@@ -38,7 +38,17 @@ include('config/connect_database.php');
                         <a href=<?php echo SITEURL.'admin' ?>>Admin</a>
                     </li>
                     <li>
-                        <a href=<?php echo SITEURL.'customer/Login.php'; ?> >Login</a>
+                        <?php
+                        if (isset($_SESSION['username'])) {
+                            ?>
+                            <a href=<?php echo SITEURL.'customer/Logout.php'; ?> >Logout</a>
+                            <?php
+                        } else {
+                            ?>
+                            <a href=<?php echo SITEURL.'customer/Login.php'; ?> >Login</a>
+                            <?php
+                        }
+                        ?>
                     </li>
                 </ul>
             </div>
