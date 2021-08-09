@@ -214,6 +214,10 @@ fieldset{
     font-weight: bold;
 }
 
+.total-container {
+    margin: 0 auto;
+}
+
 
 
 /* CSS for Mobile Size or Smaller Screen */
