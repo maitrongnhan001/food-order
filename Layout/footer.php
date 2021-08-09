@@ -23,6 +23,7 @@
         </div>
     </section>
     <!-- footer Section Ends Here -->
-
+    <!-- script all-->
+    <script src="./App/App.js"></script>
 </body>
 </html>
