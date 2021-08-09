@@ -1,4 +1,12 @@
 <?php include('Layout/menu.php');
+//check login
+if (isset($_SESSION['username'])) {
+    //get username
+    $username = $_SESSION['username'];
+} else {
+    //redirect to login
+    header('Location: ' . SITEURL . 'customer/Login.php');
+}
 if (isset($_GET['id'])) {
     //Get food id
     $food_id = $_GET['id'];
@@ -44,14 +52,22 @@ if (isset($_GET['id'])) {
                 </div>
 
                 <div class="food-menu-desc">
-                    <h3> <?php echo $title; ?> </h3>
-                    <p class="food-price"> <?php echo $price; ?> </p>
+                    <div class="row">
+                        <div class="clearfix">
+                            <h3> <?php echo $title; ?> </h3>
+                            <p class="food-price"> <?php echo $price; ?> </p>
 
-                    <input type="hidden" name="food" value= <?php echo $title; ?> >
-                    <input type="hidden" name="price" value= <?php echo $price; ?> >
+                            <input type="hidden" name="food" value=<?php echo $title; ?>>
+                            <input type="hidden" id="pr" name="price" value=<?php echo $price; ?>>
+                        </div>
+                        <div class="clearfix total-container">
+                            <h3>Total</h3>
+                            <p class="food-price" id="rt"> 11</p>
+                        </div>
+                    </div>
 
                     <div class="order-label">Quantity</div>
-                    <input type="number" name="qty" class="input-responsive" value="1" required>
+                    <input type="number" id="ipn" name="qty" class="input-responsive" value="1" required>
 
                 </div>
 
@@ -59,9 +75,6 @@ if (isset($_GET['id'])) {
 
             <fieldset>
                 <legend>Delivery Details</legend>
-                <div class="order-label">Full Name</div>
-                <input type="text" name="full-name" placeholder="E.g. Vijay Thapa" class="input-responsive" required>
-
                 <div class="order-label">Phone Number</div>
                 <input type="tel" name="contact" placeholder="E.g. 9843xxxxxx" class="input-responsive" required>
 
@@ -80,7 +93,7 @@ if (isset($_GET['id'])) {
 </section>
 <!-- fOOD sEARCH Section Ends Here -->
 
-<?php 
+<?php
 require_once('./Debug/Debug.php');
 if (isset($_POST['submit'])) {
     //Get data food
@@ -94,7 +107,7 @@ if (isset($_POST['submit'])) {
 
     $status = 'Ordered';
 
-    $customer_name = $_POST['full-name'];
+    $customer_name = $username;
     $customer_contact = $_POST['contact'];
     $customer_email = $_POST['email'];
     $customer_address = $_POST['address'];
@@ -126,16 +139,16 @@ if (isset($_POST['submit'])) {
     )";
     // debug($sql);
     $result = execute($sql);
-    
+
     //check execute database
     if ($result) {
         $_SESSION['order'] = '<div class="success text-center">Food Ordered Successfully</div>';
-        header('Location: '.SITEURL);
+        header('Location: ' . SITEURL);
     } else {
         $_SESSION['order'] = '<div class="error text-center">Faild to Order Food</div>';
-        header('Location: '.SITEURL);
+        header('Location: ' . SITEURL);
     }
 }
- 
-include('Layout/footer.php'); 
+
+include('Layout/footer.php');
 ?>

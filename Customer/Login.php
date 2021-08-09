@@ -34,6 +34,12 @@ include('../config/connect_database.php');
                     <a href= <?php echo SITEURL.'Customer/ForgotPassword.php'; ?> class = "forgot">Forgot Password</a>
                 </div>
                 <br>
+                <?php
+                if (isset($_SESSION['login-faild'])) {
+                    echo $_SESSION['login-faild'];
+                    unset($_SESSION['login-faild']);
+                }
+                ?>
                 <input class="submit-login btn-primary" type="submit" name="submit" value="Login" class="btn-primary">
             </form>
         </div>
@@ -42,5 +48,26 @@ include('../config/connect_database.php');
         </div>
     </div>
 </body>
+<?php
+if (isset($_POST['submit'])) {
+    //get data
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+
+    //check login
+    $query = "SELECT * FROM tbl_customer WHERE customer_name = '$username' AND Password = '$password'";
+    $result = executeResult($query);
+    //check result
+    if (count($result) == 1) {
+        //same
+        $_SESSION['username'] = $username;
+        header('Location: '.SITEURL);
+    } else {
+        //error
+        $_SESSION['login-faild'] = '<div class="error">Faild to Login.</div>';
+        header('Location: '.SITEURL.'customer/Login.php');
+    }
+}
+?>
 
 </html>
