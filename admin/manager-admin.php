@@ -17,11 +17,11 @@
         }
         //check session update admin
         if (isset($_SESSION['update'])) {
-            echo $_SESSION['update']. '<br /><br /><br />';
+            echo $_SESSION['update'] . '<br /><br /><br />';
             unset($_SESSION['update']);
         }
         ?>
-        <a href="add-admin.php" class="btn-primary">Add Admin</a>
+        <a href="add-admin.php" class="row-200 btn-primary">Add Admin</a>
         <br /><br /><br />
         <table class="tbl-full">
             <tr>
@@ -44,9 +44,11 @@
                     <td><?php echo $index['full_name'] ?></td>
                     <td><?php echo $index['username'] ?></td>
                     <td>
-                        <a class='btn-primary' href=<?php echo $ChangePass_Url ?>>Update Password</a>
-                        <a class='btn-secondary' href=<?php echo $Update_Url ?>>Update Admin</a>
-                        <a class='btn-danger' href=<?php echo $Delete_Url ?>>Delete Admin</a>
+                        <div class="row">
+                            <a class='btn-primary' href=<?php echo $ChangePass_Url ?>>Update Password</a>
+                            <a class='btn-secondary' href=<?php echo $Update_Url ?>>Update Admin</a>
+                            <a class='btn-danger' href=<?php echo $Delete_Url ?>>Delete Admin</a>
+                        </div>
                     </td>
                 </tr>
             <?php

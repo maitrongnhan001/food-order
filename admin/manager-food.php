@@ -35,7 +35,7 @@
             unset($_SESSION['update']);
         }
         ?>
-        <a href=<?php echo SITEURL . 'admin/add-food.php' ?> class="btn-primary">Add Food</a>
+        <a href=<?php echo SITEURL . 'admin/add-food.php' ?> class="row-200 btn-primary">Add Food</a>
         <br /><br /><br />
         <table class="tbl-full">
             <tr>
@@ -74,32 +74,33 @@
                     <td> <?php echo $index['title']; ?> </td>
                     <td> <?php echo $index['description']; ?> </td>
                     <td> <?php echo $index['price']; ?> </td>
-                    <td> 
-                    <?php 
-                            if ($index['image_name'] != "") {
-                                //display the image
-                                ?>
-                                <img src="<?php echo SITEURL.'images/food/'.$index['image_name']; ?>" width="100px" alt="">
-                                <?php
-                            } else {
-                                //display the message
-                                echo '<div class="error">Image not Added</div>';
-                            }
-                            ?>
+                    <td>
+                        <?php
+                        if ($index['image_name'] != "") {
+                            //display the image
+                        ?>
+                            <img src="<?php echo SITEURL . 'images/food/' . $index['image_name']; ?>" width="100px" alt="">
+                        <?php
+                        } else {
+                            //display the message
+                            echo '<div class="error">Image not Added</div>';
+                        }
+                        ?>
                     </td>
                     <td> <?php echo $index['category_id']; ?> </td>
                     <td> <?php echo $index['featured']; ?> </td>
                     <td> <?php echo $index['active'] ?> </td>
                     <td>
-                        <a class="btn-secondary" href= <?php 
-                        //get id and image name
-                        echo SITEURL.'admin/update-food.php?id='.$index['id'];
-                        ?> >Update Admin</a>
-                        <a class="btn-danger" 
-                        href= <?php 
-                        //get id and image name
-                        echo SITEURL.'admin/delete-food.php?id='.$index['id'].'&image_name='.$index['image_name'];
-                        ?> >Delete Admin</a>
+                        <div class="row">
+                            <a class="btn-secondary" href=<?php
+                                                            //get id and image name
+                                                            echo SITEURL . 'admin/update-food.php?id=' . $index['id'];
+                                                            ?>>Update Admin</a>
+                            <a class="btn-danger" href=<?php
+                                                        //get id and image name
+                                                        echo SITEURL . 'admin/delete-food.php?id=' . $index['id'] . '&image_name=' . $index['image_name'];
+                                                        ?>>Delete Admin</a>
+                        </div>
                     </td>
                 </tr>
             <?php
