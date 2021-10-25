@@ -37,4 +37,18 @@ function executeResult($sql) {
     $conn -> close();
     return $data;
 }
+
+function none($sql) {
+    $conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
+    if($conn -> connect_error) {
+        return $conn -> connect_error;
+    }
+    $result = mysqli_query($conn, $sql);
+    $data = array();
+    while($row = mysqli_fetch_array($result, 1)){
+        $data[] = $row;
+    }
+    $conn -> close();
+    return $data;
+}
 ?>
